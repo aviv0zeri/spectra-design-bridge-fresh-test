@@ -1,0 +1,40 @@
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 28px 32px 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .dashboard-shell {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    padding: 20px 16px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}

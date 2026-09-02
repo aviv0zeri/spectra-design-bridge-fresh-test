@@ -1,0 +1,83 @@
+.analytics-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.analytics-card-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.analytics-card-header p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.analytics-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+.analytics-chart {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  min-height: 180px;
+}
+
+.analytics-bar-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.analytics-bar-track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+
+.analytics-bar-fill {
+  width: 100%;
+  min-height: 6px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, var(--accent), var(--brand));
+  transition: height 0.3s ease;
+}
+
+.analytics-bar-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
