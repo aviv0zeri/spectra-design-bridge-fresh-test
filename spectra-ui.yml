@@ -1,0 +1,19 @@
+web:
+  components:
+    sidebar:
+      entry: src/components/Sidebar.jsx
+      editable_properties:
+        width:
+          real_property: width
+          real_value_template: "{value}"
+          real_representation:
+            kind: css_declaration
+            file: src/components/Sidebar.css
+            selector: .sidebar
+            property: width
+            expected_unit: px
+          representations:
+            - kind: figma_typed_property
+              property_path: width
+              geometry_offset: 0
+              normalize: numeric_passthrough
