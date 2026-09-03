@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Icon from "./Icon.jsx";
 import { navItems } from "../data/dashboardData.js";
 import "./Sidebar.css";
 
 function Sidebar() {
-  const [activeId, setActiveId] = useState(navItems[0].id);
-
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
@@ -19,14 +17,23 @@ function Sidebar() {
         <ul>
           {navItems.map((item) => (
             <li key={item.id}>
-              <button
-                type="button"
-                className={`sidebar-nav-item${item.id === activeId ? " is-active" : ""}`}
-                onClick={() => setActiveId(item.id)}
-              >
-                <Icon name={item.icon} size={18} />
-                <span>{item.label}</span>
-              </button>
+              {item.to ? (
+                <NavLink
+                  to={item.to}
+                  end={item.to === "/"}
+                  className={({ isActive }) =>
+                    `sidebar-nav-item${isActive ? " is-active" : ""}`
+                  }
+                >
+                  <Icon name={item.icon} size={18} />
+                  <span>{item.label}</span>
+                </NavLink>
+              ) : (
+                <button type="button" className="sidebar-nav-item">
+                  <Icon name={item.icon} size={18} />
+                  <span>{item.label}</span>
+                </button>
+              )}
             </li>
           ))}
         </ul>

@@ -1,0 +1,20 @@
+.reports-summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.reports-summary-value {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.reports-summary-label {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}

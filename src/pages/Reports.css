@@ -1,0 +1,25 @@
+.reports-range {
+  display: flex;
+  gap: 8px;
+}
+
+.reports-range-tab {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.reports-range-tab:hover {
+  color: var(--text-primary);
+}
+
+.reports-range-tab.is-active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}

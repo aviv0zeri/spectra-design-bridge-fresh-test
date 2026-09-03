@@ -1,31 +1,37 @@
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar.jsx";
-import Header from "./components/Header.jsx";
-import StatCard from "./components/StatCard.jsx";
-import AnalyticsCard from "./components/AnalyticsCard.jsx";
-import ActivityFeed from "./components/ActivityFeed.jsx";
-import { stats } from "./data/dashboardData.js";
+import Dashboard from "./pages/Dashboard.jsx";
+import Reports from "./pages/Reports.jsx";
 import "./App.css";
 
-function App() {
+function AppLayout() {
   return (
     <div className="dashboard-shell">
       <Sidebar />
 
       <main className="dashboard-content">
-        <Header />
-
-        <section className="stats-grid" aria-label="Key metrics">
-          {stats.map((stat) => (
-            <StatCard key={stat.id} {...stat} />
-          ))}
-        </section>
-
-        <section className="insights-grid">
-          <AnalyticsCard />
-          <ActivityFeed />
-        </section>
+        <Outlet />
       </main>
     </div>
+  );
+}
+
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/reports" element={<Reports />} />
+      </Route>
+    </Routes>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 

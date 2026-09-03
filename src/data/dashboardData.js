@@ -1,6 +1,6 @@
 export const navItems = [
-  { id: "dashboard", label: "Dashboard", icon: "dashboard" },
-  { id: "reports", label: "Reports", icon: "reports" },
+  { id: "dashboard", label: "Dashboard", icon: "dashboard", to: "/" },
+  { id: "reports", label: "Reports", icon: "reports", to: "/reports" },
   { id: "audience", label: "Audience", icon: "audience" },
   { id: "settings", label: "Settings", icon: "settings" },
 ];
@@ -47,6 +47,11 @@ export const weeklyActivity = [
   { day: "Sat", value: 40 },
   { day: "Sun", value: 33 },
 ];
+
+export const reportsSummary = {
+  week: { label: "Sessions this week", value: "1,204" },
+  month: { label: "Sessions this month", value: "5,842" },
+};
 
 export const recentActivity = [
   {
