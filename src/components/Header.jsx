@@ -2,12 +2,15 @@ import Icon from "./Icon.jsx";
 import { currentUser } from "../data/dashboardData.js";
 import "./Header.css";
 
-function Header() {
+function Header({
+  title = "Dashboard Overview",
+  subtitle = "Welcome back, here’s what’s happening today.",
+}) {
   return (
     <header className="header">
       <div className="header-heading">
-        <h1>Dashboard Overview</h1>
-        <p>Welcome back, here&rsquo;s what&rsquo;s happening today.</p>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
       </div>
 
       <div className="header-actions">

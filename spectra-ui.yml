@@ -1,4 +1,26 @@
 web:
+  pages:
+    dashboard:
+      route: /
+      entry: src/pages/Dashboard.jsx
+      components:
+        - sidebar
+        - header
+    reports:
+      route: /reports
+      entry: src/pages/Reports.jsx
+      components:
+        - sidebar
+        - header
+        - reports-summary
+    reports-week:
+      route: /reports?range=week
+      state: range-week
+      entry: src/pages/Reports.jsx
+      components:
+        - sidebar
+        - header
+        - reports-summary
   components:
     sidebar:
       entry: src/components/Sidebar.jsx
