@@ -37,5 +37,5 @@ web:
           representations:
             - kind: figma_typed_property
               property_path: width
-              geometry_offset: -33
+              geometry_offset: 0
               normalize: numeric_passthrough
